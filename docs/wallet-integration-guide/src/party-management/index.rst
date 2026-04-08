@@ -43,11 +43,11 @@ By default an **Ed25519** encryption is used. There exists many libraries that c
 Generating Keys from a Mnemonic Phrase (BIP-0039)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Canton Network supports the generation of cryptographic keys using a mnemonic code or mnemonic sentence, 
-following the `BIP-0039 standard <https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki>`_. 
+The Canton Network supports the generation of cryptographic keys using a mnemonic code or mnemonic sentence,
+following the `BIP-0039 standard <https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki>`_.
 
-Using a mnemonic phrase allows for deterministic key generation, which simplifies the backup and recovery process. 
-Instead of managing individual private key files, you can recreate your keys across different environments using a 
+Using a mnemonic phrase allows for deterministic key generation, which simplifies the backup and recovery process.
+Instead of managing individual private key files, you can recreate your keys across different environments using a
 human-readable sequence of words.
 
 A typescript example of generating an Ed25519 key pair with a BIP-0039 mnemonic phrase using the libraries bip39 and ed25519 as dependencies is shown below:
@@ -92,12 +92,11 @@ The wallet SDK has helper functions to generate these transactions:
 
 Decoding the topology transactions
 ----------------------------------
-Sometimes converting the topology transactions to human readable json might be needed, for this you can use the decodeTopologyTx function:
+Sometimes converting the topology transactions to human readable json might be needed, for this you can use the ``.decode()`` function:
 
-.. https://github.com/hyperledger-labs/splice-wallet-kernel/issues/1538
-.. .. literalinclude:: ../../examples/snippets/decode-topology-tx.ts
-..    :language: typescript
-..    :dedent:
+.. literalinclude:: ../../examples/scripts/13-decode-transaction.ts
+   :language: typescript
+   :dedent:
 
 Sign multi-hash
 ---------------
